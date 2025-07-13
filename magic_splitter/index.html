@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-topo">
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    <a href="#login" class="login-btn">🔐 Iniciar Sessão</a>
+    <div class="menu-links" id="menuLinks">
+      <a href="#topo">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#comentarios">Comentários</a>
+      <a href="https://wa.me/244933411208" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="container" id="topo">
+    <h1 class="logo">🎧 Magic Splitter</h1>
+    <p class="slogan">Limpa o som. Separa o que importa.</p>
+
+    <div class="buttons">
+      <button onclick="escolherTipo('ruido')">🔉 Reduzir Ruído</button>
+      <button onclick="escolherTipo('voz')">🎵 Separar Voz/Música</button>
+    </div>
+
+    <div id="uploadArea" style="display: none;">
+      <p><strong>Escolhe um ficheiro de áudio para enviar:</strong></p>
+      <input type="file" id="audioInput" accept="audio/*"><br><br>
+      <button onclick="enviarAudio()">🚀 Enviar Áudio</button>
+    </div>
+
+    <div id="resultado" style="display: none;">
+      <p>✅ Upload concluído! Escuta abaixo:</p>
+      <audio controls id="audioPreview" style="display: none;"></audio><br><br>
+      <a id="btnDownload" class="download-btn" style="display: none;">⬇️ Baixar Áudio</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
